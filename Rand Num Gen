@@ -1,7 +1,7 @@
 import random
 noa = 0
 num = random.randrange(1,100)
-guess = int(input("Type any number between 1 to 100: "))
+print("Let's play a game?")
 if guess < 1:
   noa += 1
   num = random.randrange(1,100)
@@ -18,32 +18,28 @@ elif guess > 100:
   guess = int(input("Type any number between 1 to 100: "))
 else:
   while guess != num:
+    guess = int(input("Type any number between 1 to 100: "))
+    noa += 1
     if guess < num:
       num = random.randrange(1,100)
-      noa += 1
       print("Computer's choice: ", num)
       print("Guess number: ", noa)
       print("\nToo low! Try again.")
       print(" ")
-      guess = int(input("Type any number between 1 to 100: "))
     elif guess > num:
       num = random.randrange(1,100)
-      noa += 1
       print("Computer's choice: ", num)
       print("Guess number: ", noa)
       print("\nToo high! Try again.")
       print(" ")
-      guess = int(input("Type any number between 1 to 100: "))
-    else: 
-      print("My code is wrong.")
-  
-  noa += 1
-  print("Great minds think alike! You guessed the number right!!!")
-  print("Computer's choice: ", num)
-  print("Guess number: ", noa)
-  print("Wanna try again?\n")
-  tryagain = input("Yes/No")
-  if tryagain == "Yes" or "Y" or "y":
-    guess = int(input("Type any number between 1 to 100: "))
-  else: 
-    print("https://www.youtube.com/watch?v=huGd4efgdPA")
+    else:   
+      print("F")
+      print(f"Great minds think alike! You guessed the number right in the {noa}th guess!!!")
+      print("Computer's choice: ", num)
+      print("Guess number: ", noa)
+      print("Wanna try again?\n")
+      tryagain = input("Yes/No")
+      if tryagain == "Yes" or "Y" or "y":
+        guess = int(input("Type any number between 1 to 100: "))
+      else: 
+        print("https://www.youtube.com/watch?v=huGd4efgdPA")
